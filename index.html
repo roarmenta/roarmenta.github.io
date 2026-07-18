@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Roberto Armenta — Cloud Solution Architect</title>
+<meta name="description" content="Roberto Armenta — Cloud Solution Architect at Microsoft. 13+ years designing enterprise data, application, and AI solutions. Miami, FL." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F4F7FA;
+  --ink:#14212B;
+  --cobalt:#1B54C4;
+  --steel:#64788A;
+  --grid:#DCE5EC;
+  --line:#C6D2DC;
+  --amber:#B67C13;
+  --card:#FFFFFF;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'IBM Plex Sans',system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--paper);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size:48px 48px;
+  line-height:1.6;
+}
+a{color:var(--cobalt);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+.mono{font-family:'IBM Plex Mono',monospace}
+
+/* ---------- top bar ---------- */
+nav{
+  position:sticky;top:0;z-index:10;
+  background:rgba(244,247,250,.92);backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--line);
+}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+nav .brand{font-family:'IBM Plex Mono',monospace;font-size:.85rem;letter-spacing:.08em;color:var(--ink);font-weight:500}
+nav .brand span{color:var(--cobalt)}
+nav ul{display:flex;gap:26px;list-style:none}
+nav ul a{font-size:.85rem;color:var(--steel);font-weight:500}
+nav ul a:hover{color:var(--cobalt);text-decoration:none}
+
+/* ---------- hero ---------- */
+header{padding:96px 0 72px;border-bottom:1px solid var(--line)}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cobalt);margin-bottom:18px}
+h1{
+  font-family:'Archivo',sans-serif;font-weight:800;
+  font-size:clamp(2.6rem,7vw,4.6rem);line-height:1.02;letter-spacing:-.02em;
+}
+.tagline{font-size:clamp(1.05rem,2.4vw,1.3rem);color:var(--steel);max-width:640px;margin:22px 0 30px}
+.tagline strong{color:var(--ink);font-weight:600}
+.hero-meta{display:flex;flex-wrap:wrap;gap:12px 28px;font-family:'IBM Plex Mono',monospace;font-size:.82rem;color:var(--steel)}
+.hero-meta a{color:var(--ink);border-bottom:1px solid var(--line)}
+.hero-meta a:hover{color:var(--cobalt);border-color:var(--cobalt);text-decoration:none}
+.cta-row{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{
+  display:inline-block;padding:12px 22px;font-weight:600;font-size:.9rem;
+  border:1.5px solid var(--ink);color:var(--ink);border-radius:2px;
+}
+.btn:hover{text-decoration:none;background:var(--ink);color:var(--paper)}
+.btn.primary{background:var(--cobalt);border-color:var(--cobalt);color:#fff}
+.btn.primary:hover{background:#12409B;border-color:#12409B}
+
+/* ---------- sections ---------- */
+section{padding:72px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:40px}
+.sec-head h2{font-family:'Archivo',sans-serif;font-weight:700;font-size:1.7rem;letter-spacing:-.01em}
+.sec-head .ref{font-family:'IBM Plex Mono',monospace;font-size:.75rem;color:var(--steel);letter-spacing:.1em}
+
+/* stats strip */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:44px}
+.stat{background:var(--card);padding:20px 22px}
+.stat .n{font-family:'Archivo',sans-serif;font-weight:700;font-size:1.6rem;color:var(--cobalt)}
+.stat .l{font-size:.82rem;color:var(--steel);margin-top:2px}
+
+/* ---------- experience: flight-path timeline ---------- */
+.timeline{position:relative;padding-left:34px}
+.timeline::before{
+  content:"";position:absolute;left:8px;top:6px;bottom:6px;width:0;
+  border-left:1.5px dashed var(--cobalt);opacity:.55;
+}
+.stop{position:relative;margin-bottom:52px}
+.stop:last-child{margin-bottom:0}
+.stop::before{
+  content:"";position:absolute;left:-32px;top:7px;width:13px;height:13px;
+  background:var(--paper);border:2.5px solid var(--cobalt);border-radius:50%;
+}
+.stop .when{font-family:'IBM Plex Mono',monospace;font-size:.76rem;color:var(--steel);letter-spacing:.06em;text-transform:uppercase}
+.stop h3{font-family:'Archivo',sans-serif;font-size:1.2rem;font-weight:700;margin:4px 0 2px}
+.stop .org{font-weight:600;color:var(--cobalt);font-size:.95rem;margin-bottom:12px}
+.stop ul{list-style:none;color:#33434F}
+.stop li{position:relative;padding-left:18px;margin-bottom:9px;font-size:.95rem}
+.stop li::before{content:"—";position:absolute;left:0;color:var(--cobalt)}
+.sub-role{margin-top:24px;padding-left:16px;border-left:2px solid var(--line)}
+.sub-role h4{font-weight:600;font-size:1rem}
+.sub-role .when{display:block;margin-bottom:8px}
+.metric{background:#EAF0FB;color:#12409B;padding:0 5px;border-radius:2px;font-weight:600}
+
+/* ---------- skills ---------- */
+.skill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.skill-card{background:var(--card);border:1px solid var(--line);padding:26px}
+.skill-card h3{font-family:'IBM Plex Mono',monospace;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--cobalt);margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:.83rem;padding:5px 11px;border:1px solid var(--line);border-radius:2px;background:var(--paper);color:#33434F}
+
+/* ---------- certs & awards ---------- */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.plain-list{list-style:none}
+.plain-list li{padding:11px 0;border-bottom:1px dashed var(--line);font-size:.93rem;display:flex;gap:10px}
+.plain-list .yr{font-family:'IBM Plex Mono',monospace;color:var(--steel);font-size:.8rem;min-width:44px;padding-top:2px}
+.award-flag{color:var(--amber);font-weight:600}
+
+/* ---------- title block footer (drawing sheet) ---------- */
+footer{padding:64px 0 40px}
+.title-block{
+  border:1.5px solid var(--ink);background:var(--card);
+  display:grid;grid-template-columns:2fr 1fr 1fr;
+}
+.tb-cell{padding:16px 20px;border-right:1.5px solid var(--ink)}
+.tb-cell:last-child{border-right:none}
+.tb-cell .lbl{font-family:'IBM Plex Mono',monospace;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--steel);margin-bottom:5px}
+.tb-cell .val{font-weight:600;font-size:.92rem}
+.tb-row2{grid-column:1 / -1;border-top:1.5px solid var(--ink);display:grid;grid-template-columns:1fr 1fr 1fr}
+.tb-row2 .tb-cell{border-top:none}
+.foot-note{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--steel);text-align:center;margin-top:26px}
+
+@media (max-width:720px){
+  .two-col{grid-template-columns:1fr}
+  .title-block,.tb-row2{grid-template-columns:1fr}
+  .tb-cell{border-right:none;border-bottom:1.5px solid var(--ink)}
+  .title-block > .tb-cell:last-of-type{border-bottom:none}
+  nav ul{display:none}
+}
+@media (prefers-reduced-motion:no-preference){
+  .stop{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+  .stop.in{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">ROARMENTA<span>.COM</span></div>
+    <ul>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#credentials">Credentials</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Cloud Solution Architect · Miami, FL</div>
+    <h1>Roberto Armenta</h1>
+    <p class="tagline">From aerospace manufacturing floors to Fortune 500 cloud architecture — <strong>13+ years</strong> designing enterprise data, application, and AI solutions at <strong>Microsoft</strong> and <strong>Gulfstream Aerospace</strong>.</p>
+    <div class="hero-meta">
+      <span>📍 Miami, Florida, US</span>
+      <a href="https://github.com/roarmenta" target="_blank" rel="noopener">github.com/roarmenta</a>
+      <a href="https://www.linkedin.com/in/robertoarmenta" target="_blank" rel="noopener">linkedin.com/in/robertoarmenta</a>
+    </div>
+    <div class="cta-row">
+      <a class="btn primary" href="#contact">Get in touch</a>
+      <a class="btn" href="Roberto_Armenta_Resume_2026.pdf" download>Download résumé (PDF)</a>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="n">13+</div><div class="l">Years in software &amp; data engineering</div></div>
+      <div class="stat"><div class="n">20+</div><div class="l">Process-automation solutions delivered</div></div>
+      <div class="stat"><div class="n">100+</div><div class="l">Students taught in cloud &amp; AI labs</div></div>
+      <div class="stat"><div class="n">100%</div><div class="l">FY25 attainment award, Microsoft</div></div>
+    </div>
+  </div>
+</header>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head"><h2>Experience</h2><span class="ref">FLIGHT PATH · MEXICALI → SAVANNAH → MIAMI</span></div>
+    <div class="timeline">
+
+      <div class="stop">
+        <span class="when mono">Apr 2022 — Present</span>
+        <h3>Cloud Solution Architect</h3>
+        <div class="org">Microsoft · United States</div>
+        <ul>
+          <li>Partner with Fortune 500 customers to design and deliver enterprise cloud and AI solutions — from technical discovery and proof of concept to production.</li>
+          <li>Advise on scalable architecture, governance, security, and operating models for business-critical applications and AI initiatives.</li>
+          <li>Design data and application architectures spanning Azure, Microsoft Fabric, and Power Platform, integrated with ERP, CRM, and data warehouses.</li>
+          <li>Lead customer-facing workshops and architecture sessions, translating business requirements into deployable solution strategies.</li>
+          <li>Technical instructor for hands-on cloud &amp; AI labs — <span class="metric">Skillable Instructor Recognition, 100+ students</span> (2023–2025).</li>
+          <li>Earned Microsoft's <span class="metric">100% Attainment award (FY25)</span> across the account portfolio.</li>
+        </ul>
+      </div>
+
+      <div class="stop">
+        <span class="when mono">May 2012 — Apr 2022</span>
+        <h3>Gulfstream Aerospace — 10 Years</h3>
+        <div class="org">Student Apprentice (Mexicali, MX) → Software Engineer (Savannah, GA)</div>
+
+        <div class="sub-role">
+          <h4>Business Application Development Technical Specialist (Software Engineer)</h4>
+          <span class="when mono">Apr 2021 — Apr 2022 · Savannah, GA</span>
+          <ul>
+            <li>Full-stack development of in-house business applications for engineering, manufacturing, and operations (C#, T-SQL, Python, VB.NET, JavaScript, SQL Server).</li>
+            <li>Built a BOM-notes validation tool (refactored VB.NET → C#) enabling engineers to verify PLM bill-of-material notes against a standard SQL catalog per FAA requirements.</li>
+          </ul>
+        </div>
+
+        <div class="sub-role">
+          <h4>Supply Chain Engineer II → III (Software Developer)</h4>
+          <span class="when mono">Mar 2017 — Apr 2021 · Savannah, GA</span>
+          <ul>
+            <li>SQL Server administrator, architect &amp; developer integrating quality, production, delivery, and finance data across SAP, CAS, Cognos, and SmarTeam.</li>
+            <li>Engineered a supplier-delivery analytics pipeline ingesting <span class="metric">500,000+ PO records in under 2 minutes</span> (C#, T-SQL bulk load).</li>
+            <li>Replaced a 15-minute manual MES query workflow with a desktop app powered by indexed stored procedures — <span class="metric">results in seconds</span>.</li>
+          </ul>
+        </div>
+
+        <div class="sub-role">
+          <h4>Industrial Engineer — Wing Manufacturing (Software Developer)</h4>
+          <span class="when mono">Nov 2014 — Mar 2017 · Savannah, GA</span>
+          <ul>
+            <li>Created the Gulfstream Production Tracking System (GPTS), the site's first daily production-tracking platform — cut report delivery from <span class="metric">8 hours to 1.2 seconds</span> across 3 aircraft models and 12 build stations.</li>
+            <li>Designed indirect tooling in CATIA V5 for additive manufacturing and CNC machining on the G650 and AAP wing programs.</li>
+          </ul>
+        </div>
+
+        <div class="sub-role">
+          <h4>Early Career — Manufacturing Engineer · Industrial Engineer · Student Apprentice</h4>
+          <span class="when mono">May 2012 — Nov 2014 · Mexicali, MX</span>
+          <ul>
+            <li>Co-created a site-wide procurement system (VBA/Access) with role-based approvals; trained <span class="metric">300+ users</span> — earning the Gulfstream Mach 3 Award (2013).</li>
+            <li>Built an MES computing business-unit OEE from daily output, labor hours, CNC spindle times, and defects.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head"><h2>Skills</h2><span class="ref">TOOLING &amp; PLATFORMS</span></div>
+    <div class="skill-grid">
+      <div class="skill-card">
+        <h3>Cloud &amp; AI</h3>
+        <div class="chips">
+          <span class="chip">Azure</span><span class="chip">Microsoft Fabric</span><span class="chip">Copilot Studio</span><span class="chip">Microsoft Foundry</span><span class="chip">Power Platform</span><span class="chip">Power Automate</span><span class="chip">Power Pages</span><span class="chip">MCP</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3>Data Engineering</h3>
+        <div class="chips">
+          <span class="chip">SQL Server (Admin · Architect · Dev)</span><span class="chip">T-SQL</span><span class="chip">PL/SQL</span><span class="chip">ETL</span><span class="chip">Power BI</span><span class="chip">Data Integration</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3>Application Development</h3>
+        <div class="chips">
+          <span class="chip">C#</span><span class="chip">.NET</span><span class="chip">Python</span><span class="chip">VB.NET</span><span class="chip">JavaScript</span><span class="chip">jQuery</span><span class="chip">ASP.NET</span><span class="chip">Full-Stack</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3>Engineering &amp; Delivery</h3>
+        <div class="chips">
+          <span class="chip">Solution Architecture</span><span class="chip">Azure DevOps</span><span class="chip">Git</span><span class="chip">Project Management</span><span class="chip">Lean / Six Sigma</span><span class="chip">RCCA</span><span class="chip">CATIA V5</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="credentials">
+  <div class="wrap">
+    <div class="sec-head"><h2>Credentials</h2><span class="ref">CERTIFICATIONS · AWARDS · EDUCATION</span></div>
+    <div class="two-col">
+      <div>
+        <h3 class="mono" style="font-size:.8rem;letter-spacing:.12em;color:var(--cobalt);margin-bottom:10px">CERTIFICATIONS &amp; TRAINING</h3>
+        <ul class="plain-list">
+          <li><span class="yr">2026</span><span>Microsoft Applied Skills: Create Agents in Copilot Studio</span></li>
+          <li><span class="yr">2026</span><span>Microsoft Applied Skills: Automated Processes with Power Automate</span></li>
+          <li><span class="yr">2026</span><span>Model Context Protocol (MCP) for Beginners — Microsoft</span></li>
+          <li><span class="yr">2022</span><span>Microsoft Certified: Azure Fundamentals</span></li>
+          <li><span class="yr">2022</span><span>Microsoft Certified: Power Platform Fundamentals</span></li>
+          <li><span class="yr">2013</span><span>CATIA V5 VBA Automation — Rand Worldwide</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="mono" style="font-size:.8rem;letter-spacing:.12em;color:var(--cobalt);margin-bottom:10px">AWARDS &amp; EDUCATION</h3>
+        <ul class="plain-list">
+          <li><span class="yr">FY25</span><span><span class="award-flag">★</span> 100% Attainment — Microsoft</span></li>
+          <li><span class="yr">2025</span><span><span class="award-flag">★</span> Skillable Instructor Recognition, 100+ students</span></li>
+          <li><span class="yr">2015</span><span><span class="award-flag">★</span> BEYA STEM Modern-Day Technology Leader</span></li>
+          <li><span class="yr">2013</span><span><span class="award-flag">★</span> Gulfstream Mach 3 Award</span></li>
+          <li><span class="yr">2012</span><span>B.Eng. Mechatronics, Robotics &amp; Automation — CETYS Universidad</span></li>
+          <li><span class="yr">2014</span><span>Project Management Diploma — CETYS Universidad</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="sec-head"><h2>Contact</h2><span class="ref">SHEET 1 OF 1 · REV 2026</span></div>
+    <div class="title-block">
+      <div class="tb-cell"><div class="lbl">Name</div><div class="val">Roberto Armenta</div></div>
+      <div class="tb-cell"><div class="lbl">Role</div><div class="val">Cloud Solution Architect</div></div>
+      <div class="tb-cell"><div class="lbl">Location</div><div class="val">Miami, FL, US</div></div>
+      <div class="tb-row2">
+        <div class="tb-cell"><div class="lbl">Email</div><div class="val"><a href="mailto:rarmenta88@outlook.com">rarmenta88@outlook.com</a></div></div>
+        <div class="tb-cell"><div class="lbl">GitHub</div><div class="val"><a href="https://github.com/roarmenta" target="_blank" rel="noopener">github.com/roarmenta</a></div></div>
+        <div class="tb-cell"><div class="lbl">LinkedIn</div><div class="val"><a href="https://www.linkedin.com/in/robertoarmenta" target="_blank" rel="noopener">in/robertoarmenta</a></div></div>
+      </div>
+    </div>
+    <p class="foot-note">EN (fluent) · ES (native) — © 2026 Roberto Armenta · roarmenta.com</p>
+  </div>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.stop').forEach(s=>obs.observe(s));
+</script>
+</body>
+</html>
